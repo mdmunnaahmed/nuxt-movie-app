@@ -28,6 +28,7 @@
           />
         </div>
         <div class="movie-content">
+          <h2 class="vote text-xl mb-4"><span class="text-red-400 me-7">Rating: </span> <span class="underline text-3xl text-green-500">{{ shortRate(movie.vote_average) }}</span></h2>
           <h1 class="text-3xl mb-4">Title: {{ movie.title }}</h1>
           <p class="movie-fact tagline mb-2 flex gap-3">
             <span
@@ -102,6 +103,11 @@ export default {
         day: "numeric",
         year: "numeric",
       });
+    },
+    shortRate(rate) {
+      if(rate) {
+        return rate.toFixed(1)
+      }
     },
     toMillion(revenue) {
       if (revenue) {
