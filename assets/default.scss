@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -16,7 +16,9 @@ body {
 .page-leave-active {
   transition: opacity 0.5s;
 }
-.page-enter,
+.page-enter-from{
+  opacity: 0;
+}
 .page-leave-to {
   opacity: 0;
 }

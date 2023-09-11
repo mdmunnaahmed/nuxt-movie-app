@@ -1,5 +1,11 @@
 <template>
   <div class="home">
+
+    <Head>
+      <Title>Movie App - Latest Streaming Movies</Title>
+    </Head>
+
+
     <Hero />
 
     <!-- Search -->
@@ -34,7 +40,7 @@
               src="../assets/img/placeholder.jpg"
               class="h-full w-full object-cover"
             />
-            <div class="review">{{ movie.vote_average }}</div>
+            <div class="review">{{ movie.vote_average.toFixed(1) }}</div>
             <div class="overview">{{ movie.overview }}</div>
           </div>
           <div class="info">
@@ -46,12 +52,7 @@
               Released:
               {{ formattedReleaseDate(movie.release_date) }}
             </p>
-            <NuxtLink
-              :to="{
-                path: 'movies/' + movie.id,
-                params: { movieid: movie.id },
-              }"
-              class="button button-light"
+            <NuxtLink :to="'movies/' + movie.id" class="button button-light"
               >Get More Info</NuxtLink
             >
           </div>
@@ -64,6 +65,18 @@
 <script>
 import axios from "axios";
 export default {
+  useHead() {
+    return {
+      title: "Movie App - Latest Streaming Movies",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: 'hile working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.'
+        },
+      ],
+    };
+  },
   data() {
     return {
       movies: [],
@@ -71,6 +84,7 @@ export default {
       loading: false,
     };
   },
+
   methods: {
     async getMovies() {
       this.loading = true;
@@ -85,6 +99,7 @@ export default {
     },
     async searchMovie() {
       this.loading = true;
+      await new Promise((resolve) => setTimeout(resolve, 600));
       const data = axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=5b26fcdb91d0b598924265a4ad10815b&language=en-US&page=1&query=${this.searchInput}`
       );
@@ -105,9 +120,6 @@ export default {
         day: "numeric",
         year: "numeric",
       });
-
-      // const allDate = date.split("-");
-      // return allDate[2] + "-" + allDate[1] + "-" + allDate[0];
     },
   },
   computed: {},
