@@ -1,0 +1,5 @@
+const _default = '@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600&display=swap");*{box-sizing:border-box;font-family:Karla,sans-serif;margin:0;padding:0;scroll-behavior:smooth}body{color:#eee}.page-enter-active,.page-leave-active{transition:opacity .5s}.page-enter-from,.page-leave-to{opacity:0}.app{background-color:#211f1f;min-height:100vh}.button{background-color:#c92502;border:none;border-radius:4px;color:inherit;color:#fff;cursor:pointer;display:inline-block;padding:8px 16px;text-decoration:none;transition:all .3s ease}.button:hover{background-color:#891b02}.button-light{background-color:transparent;border:1px solid #c92502}.button-light:hover{border-color:transparent}.container{margin:0 auto;max-width:1400px}.loading{align-items:center;display:flex;height:100vh;justify-content:center;width:100%}@keyframes circle-loading{to{transform:rotate(1turn)}}.loading span{animation:circle-loading 1.2s ease infinite;border:2px solid transparent;border-radius:50%;border-top-color:#fff;display:block;height:70px;width:70px}';
+export {
+  _default as default
+};
+//# sourceMappingURL=entry-styles-2.mjs-e737fe3c.js.map
