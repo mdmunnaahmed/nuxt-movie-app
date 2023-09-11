@@ -1,4 +1,4 @@
-export default {
+const client_manifest = {
   "_nuxt-link.afcf32f2.js": {
     "resourceType": "script",
     "module": true,
@@ -187,4 +187,7 @@ export default {
     "prefetch": true,
     "preload": true
   }
-}
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map
