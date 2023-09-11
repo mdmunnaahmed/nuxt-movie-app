@@ -1,10 +1,8 @@
 <template>
   <div class="home">
-
     <Head>
       <Title>Movie App - Latest Streaming Movies</Title>
     </Head>
-
 
     <Hero />
 
@@ -72,7 +70,8 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: 'hile working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.'
+          content:
+            "hile working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
         },
       ],
     };
@@ -121,6 +120,12 @@ export default {
         year: "numeric",
       });
     },
+    // getSelectedText(event) {
+    //   if (window.getSelection) {
+    //     const selectedText = window.getSelection().toString();
+    //     console.log(selectedText);
+    //   }
+    // },
   },
   computed: {},
   mounted() {
