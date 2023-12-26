@@ -91,7 +91,7 @@ export default {
       this.loading = true;
       await new Promise((resolve) => setTimeout(resolve, 1000));
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=5b26fcdb91d0b598924265a4ad10815b&language=en-US`
+        `https://api.themoviedb.org/3/movie/${this.$route.params.id}?api_key=1b29b072cb172e51c0b5a3afa182ab29&language=en-US`
       );
       const result = await data;
       this.movie = result.data;

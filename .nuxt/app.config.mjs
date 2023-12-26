@@ -1,6 +1,6 @@
 
 import { updateAppConfig } from '#app'
-import { defuFn } from '/home/mun/Downloads/nuxt-movie-app/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/mnt/F8E02105E020CC26/vue-projects/nuxt-movie-app/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

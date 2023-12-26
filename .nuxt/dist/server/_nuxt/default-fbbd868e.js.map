@@ -1,1 +1,0 @@
-{"version":3,"file":"default-fbbd868e.js","sources":["../../../../layouts/default.vue"],"sourcesContent":["<template>\n  <div class=\"app\">\n    <slot></slot>\n  </div>\n</template>"],"names":[],"mappings":";;;;;;;;;;;;;;;;;AACO,SAAA,eAAA,MAAA,OAAA,SAAA,QAAW;;;;;;;;;;;;"}

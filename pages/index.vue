@@ -88,7 +88,7 @@ export default {
     async getMovies() {
       this.loading = true;
       const data = axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=5b26fcdb91d0b598924265a4ad10815b&language=en-US&page=1`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=1b29b072cb172e51c0b5a3afa182ab29&language=en-US&page=1`
       );
       const result = await data;
       result.data.results.forEach((movie) => {
@@ -100,7 +100,7 @@ export default {
       this.loading = true;
       await new Promise((resolve) => setTimeout(resolve, 600));
       const data = axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=5b26fcdb91d0b598924265a4ad10815b&language=en-US&page=1&query=${this.searchInput}`
+        `https://api.themoviedb.org/3/search/movie?api_key=1b29b072cb172e51c0b5a3afa182ab29&language=en-US&page=1&query=${this.searchInput}`
       );
       const result = await data;
       this.movies = [];
